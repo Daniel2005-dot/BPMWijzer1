@@ -1,0 +1,1767 @@
+{
+  "schema_version": "12.0",
+  "source": "Belastingdienst — Bpm-tarieven vanaf 1993",
+  "source_url": "https://www.belastingdienst.nl/wps/wcm/connect/bldcontentnl/themaoverstijgend/brochures_en_publicaties/bpm-tarieven",
+  "purpose": "Historical tariff layer for used imported passenger cars. Never use pending records for calculation.",
+  "records": [
+    {
+      "start": "1993-01-01",
+      "end": "1997-06-30",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": -580,
+      "notes": "First historical period; diesel reduction €580."
+    },
+    {
+      "start": "1997-07-01",
+      "end": "1997-12-31",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": -580
+    },
+    {
+      "start": "1998-01-01",
+      "end": "2000-04-30",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": -580
+    },
+    {
+      "start": "2000-05-01",
+      "end": "2001-06-30",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": 328,
+      "diesel_clean_adjustment": -217
+    },
+    {
+      "start": "2001-07-01",
+      "end": "2001-12-31",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": 328
+    },
+    {
+      "start": "2002-01-01",
+      "end": "2003-12-31",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": 328
+    },
+    {
+      "start": "2004-01-01",
+      "end": "2004-12-31",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": 328
+    },
+    {
+      "start": "2005-01-01",
+      "end": "2005-05-31",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": 328
+    },
+    {
+      "start": "2005-06-01",
+      "end": "2005-06-30",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": 328
+    },
+    {
+      "start": "2005-07-01",
+      "end": "2005-12-31",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": 328
+    },
+    {
+      "start": "2006-01-01",
+      "end": "2006-06-30",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": 328,
+      "hybrid_a_discount": 6000
+    },
+    {
+      "start": "2006-07-01",
+      "end": "2008-01-31",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.452,
+      "petrol_adjustment": -1540,
+      "diesel_adjustment": 328
+    },
+    {
+      "start": "2008-02-01",
+      "end": "2008-03-31",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.423,
+      "petrol_adjustment": -1442,
+      "diesel_adjustment": 307,
+      "co2_surcharge_threshold_petrol": 232,
+      "co2_surcharge_threshold_diesel": 192,
+      "co2_surcharge_per_gram": 110,
+      "co2_surcharge_start": "2008-02-01"
+    },
+    {
+      "start": "2008-04-01",
+      "end": "2008-12-31",
+      "status": "verified",
+      "method": "net_catalog_price",
+      "rate": 0.423,
+      "petrol_adjustment": -1442,
+      "diesel_adjustment": 307,
+      "co2_surcharge_threshold_petrol": 232,
+      "co2_surcharge_threshold_diesel": 192,
+      "co2_surcharge_per_gram": 110,
+      "particulate_differentiation": {
+        "base_discount": -900,
+        "per_mg": 200
+      }
+    },
+    {
+      "start": "2009-01-01",
+      "end": "2009-12-31",
+      "status": "verified",
+      "method": "mixed_co2_catalog_price",
+      "catalog_rate": 0.4,
+      "petrol_adjustment": -1288,
+      "diesel_adjustment": 366,
+      "petrol_lpg_bands": [
+        [
+          0,
+          205,
+          0,
+          0
+        ],
+        [
+          205,
+          null,
+          0,
+          125
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          170,
+          0,
+          0
+        ],
+        [
+          170,
+          null,
+          0,
+          125
+        ]
+      ],
+      "zero_rate": {
+        "petrol_max_co2": 110,
+        "diesel_max_co2": 95,
+        "requires_first_use_after": "2008-12-31"
+      },
+      "notes": "2009: 40% net catalog price, petrol -€1,288, diesel +€366; CO2 surcharge >205 petrol / >170 diesel at €125/g. Nihiltarief for very economical vehicles subject to first-use condition."
+    },
+    {
+      "start": "2010-01-01",
+      "end": "2010-12-31",
+      "status": "verified",
+      "method": "mixed_co2_catalog_price",
+      "petrol_lpg_bands": [
+        [
+          0,
+          110,
+          0,
+          0
+        ],
+        [
+          110,
+          180,
+          0,
+          34
+        ],
+        [
+          180,
+          270,
+          2380,
+          126
+        ],
+        [
+          270,
+          null,
+          13720,
+          288
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          95,
+          0,
+          0
+        ],
+        [
+          95,
+          155,
+          0,
+          34
+        ],
+        [
+          155,
+          232,
+          2040,
+          126
+        ],
+        [
+          232,
+          null,
+          11742,
+          288
+        ]
+      ],
+      "catalog_rate": 0.274,
+      "petrol_adjustment": -1288,
+      "cng_adjustment": -1788,
+      "diesel_adjustment": 1076,
+      "diesel_surcharge_threshold": null,
+      "zero_rate": {
+        "petrol_max_co2": 110,
+        "diesel_max_co2": 95
+      },
+      "efficiency_discount": {
+        "max_co2": 120,
+        "amount": -750
+      },
+      "notes": "2010: CO2 component plus 27.4% net catalog price; €750 efficiency discount up to 120 g/km; zero-rate thresholds 110 petrol / 95 diesel."
+    },
+    {
+      "start": "2011-01-01",
+      "end": "2011-12-31",
+      "status": "verified",
+      "method": "mixed_co2_catalog_price",
+      "petrol_lpg_bands": [
+        [
+          0,
+          110,
+          0,
+          0
+        ],
+        [
+          110,
+          180,
+          0,
+          61
+        ],
+        [
+          180,
+          270,
+          4270,
+          202
+        ],
+        [
+          270,
+          null,
+          22450,
+          471
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          95,
+          0,
+          0
+        ],
+        [
+          95,
+          155,
+          0,
+          61
+        ],
+        [
+          155,
+          232,
+          3660,
+          202
+        ],
+        [
+          232,
+          null,
+          19214,
+          471
+        ]
+      ],
+      "catalog_rate": 0.19,
+      "petrol_adjustment": -824,
+      "cng_adjustment": -1324,
+      "diesel_adjustment": 1526,
+      "zero_rate": {
+        "petrol_max_co2": 110,
+        "diesel_max_co2": 95
+      },
+      "efficiency_discount": {
+        "min_co2_exclusive": 110,
+        "max_co2": 120,
+        "amount": -500
+      },
+      "notes": "2011: CO2 component plus 19% net catalog price; €500 efficiency discount for >110 to 120 g/km; zero-rate thresholds 110 petrol / 95 diesel."
+    },
+    {
+      "start": "2012-01-01",
+      "end": "2012-06-30",
+      "status": "verified",
+      "method": "mixed_co2_catalog_price",
+      "petrol_lpg_bands": [
+        [
+          0,
+          110,
+          0,
+          0
+        ],
+        [
+          110,
+          180,
+          0,
+          94
+        ],
+        [
+          180,
+          270,
+          6580,
+          280
+        ],
+        [
+          270,
+          null,
+          31780,
+          654
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          95,
+          0,
+          0
+        ],
+        [
+          95,
+          155,
+          0,
+          94
+        ],
+        [
+          155,
+          232,
+          5640,
+          280
+        ],
+        [
+          232,
+          null,
+          27200,
+          654
+        ]
+      ],
+      "catalog_rate": 0.111,
+      "petrol_adjustment": -450,
+      "cng_adjustment": -950,
+      "diesel_adjustment": 1900,
+      "zero_rate": {
+        "petrol_max_co2": 110,
+        "diesel_max_co2": 95
+      },
+      "diesel_surcharge_fixed": {
+        "min_co2_exclusive": 95,
+        "amount": 1900
+      },
+      "notes": "2012 H1: CO2 component plus 11.1% net catalog price; diesel fixed surcharge €1,900 above 95 g/km; zero-rate thresholds 110 petrol / 95 diesel.",
+      "euro6_discount": 1000
+    },
+    {
+      "start": "2012-07-01",
+      "end": "2012-07-31",
+      "status": "verified",
+      "method": "mixed_co2_catalog_price",
+      "petrol_lpg_bands": [
+        [
+          0,
+          102,
+          0,
+          0
+        ],
+        [
+          102,
+          159,
+          0,
+          101
+        ],
+        [
+          159,
+          237,
+          5757,
+          121
+        ],
+        [
+          237,
+          242,
+          15195,
+          223
+        ],
+        [
+          242,
+          null,
+          16310,
+          559
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          91,
+          0,
+          0
+        ],
+        [
+          91,
+          143,
+          0,
+          101
+        ],
+        [
+          143,
+          211,
+          5252,
+          121
+        ],
+        [
+          211,
+          225,
+          13480,
+          223
+        ],
+        [
+          225,
+          null,
+          16602,
+          559
+        ]
+      ],
+      "catalog_rate": 0.111,
+      "petrol_adjustment": -450,
+      "diesel_adjustment": 0,
+      "diesel_surcharge_threshold": 70,
+      "diesel_surcharge_per_gram": 40.68,
+      "zero_rate": {
+        "petrol_max_co2": 102,
+        "diesel_max_co2": 91
+      },
+      "euro6_discount": 1000,
+      "notes": "2012 H2: new four-band CO2 table from 1 July; 11.1% catalog component; diesel surcharge €40.68/g above 70 g/km; Euro 6 diesel discount €1,000."
+    },
+    {
+      "start": "2012-08-01",
+      "end": "2012-12-31",
+      "status": "verified",
+      "method": "mixed_co2_catalog_price",
+      "petrol_lpg_bands": [
+        [
+          0,
+          102,
+          0,
+          0
+        ],
+        [
+          102,
+          159,
+          0,
+          101
+        ],
+        [
+          159,
+          237,
+          5757,
+          121
+        ],
+        [
+          237,
+          242,
+          15195,
+          223
+        ],
+        [
+          242,
+          null,
+          16310,
+          559
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          91,
+          0,
+          0
+        ],
+        [
+          91,
+          143,
+          0,
+          101
+        ],
+        [
+          143,
+          211,
+          5252,
+          121
+        ],
+        [
+          211,
+          225,
+          13480,
+          223
+        ],
+        [
+          225,
+          null,
+          16602,
+          559
+        ]
+      ],
+      "catalog_rate": 0.111,
+      "petrol_adjustment": -450,
+      "diesel_adjustment": 0,
+      "diesel_surcharge_threshold": 70,
+      "diesel_surcharge_per_gram": 40.68,
+      "zero_rate": {
+        "petrol_max_co2": 102,
+        "diesel_max_co2": 91
+      },
+      "euro6_discount": 1000,
+      "notes": "2012 H2 (Aug-Dec): same tariff table as July; diesel surcharge €40.68/g above 70 g/km; Euro 6 diesel discount €1,000."
+    },
+    {
+      "start": "2013-01-01",
+      "end": "2013-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          95,
+          0,
+          0
+        ],
+        [
+          95,
+          140,
+          0,
+          125
+        ],
+        [
+          140,
+          208,
+          5625,
+          148
+        ],
+        [
+          208,
+          229,
+          15689,
+          276
+        ],
+        [
+          229,
+          null,
+          21485,
+          551
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          88,
+          0,
+          0
+        ],
+        [
+          88,
+          131,
+          0,
+          125
+        ],
+        [
+          131,
+          192,
+          5375,
+          148
+        ],
+        [
+          192,
+          215,
+          14403,
+          276
+        ],
+        [
+          215,
+          null,
+          20751,
+          551
+        ]
+      ],
+      "diesel_surcharge_threshold": 70,
+      "diesel_surcharge_per_gram": 56.13,
+      "euro6_discount": 500,
+      "particulate_discount_max_mg_km": 5,
+      "particulate_discount_amount": 600
+    },
+    {
+      "start": "2014-01-01",
+      "end": "2014-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          88,
+          0,
+          0
+        ],
+        [
+          88,
+          124,
+          0,
+          105
+        ],
+        [
+          124,
+          182,
+          3780,
+          126
+        ],
+        [
+          182,
+          203,
+          11088,
+          237
+        ],
+        [
+          203,
+          null,
+          16065,
+          474
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          85,
+          0,
+          0
+        ],
+        [
+          85,
+          120,
+          0,
+          105
+        ],
+        [
+          120,
+          175,
+          3675,
+          126
+        ],
+        [
+          175,
+          197,
+          10605,
+          237
+        ],
+        [
+          197,
+          null,
+          15819,
+          474
+        ]
+      ],
+      "diesel_surcharge_threshold": 70,
+      "diesel_surcharge_per_gram": 72.93,
+      "particulate_discount_max_mg_km": 5,
+      "particulate_discount_amount": 600
+    },
+    {
+      "start": "2015-01-01",
+      "end": "2015-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          82,
+          175,
+          6
+        ],
+        [
+          82,
+          110,
+          667,
+          69
+        ],
+        [
+          110,
+          160,
+          2599,
+          112
+        ],
+        [
+          160,
+          180,
+          8199,
+          217
+        ],
+        [
+          180,
+          null,
+          12539,
+          434
+        ]
+      ],
+      "diesel_surcharge_threshold": 70,
+      "diesel_surcharge_per_gram": 86,
+      "diesel_bands": [
+        [
+          0,
+          82,
+          175,
+          6
+        ],
+        [
+          82,
+          110,
+          667,
+          69
+        ],
+        [
+          110,
+          160,
+          2599,
+          112
+        ],
+        [
+          160,
+          180,
+          8199,
+          217
+        ],
+        [
+          180,
+          null,
+          12539,
+          434
+        ]
+      ],
+      "particulate_discount_max_mg_km": 5,
+      "particulate_discount_amount": 600
+    },
+    {
+      "start": "2016-01-01",
+      "end": "2016-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          79,
+          175,
+          6
+        ],
+        [
+          79,
+          106,
+          649,
+          69
+        ],
+        [
+          106,
+          155,
+          2512,
+          124
+        ],
+        [
+          155,
+          174,
+          8588,
+          239
+        ],
+        [
+          174,
+          null,
+          13129,
+          478
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          79,
+          175,
+          6
+        ],
+        [
+          79,
+          106,
+          649,
+          69
+        ],
+        [
+          106,
+          155,
+          2512,
+          124
+        ],
+        [
+          155,
+          174,
+          8588,
+          239
+        ],
+        [
+          174,
+          null,
+          13129,
+          478
+        ]
+      ],
+      "diesel_surcharge_per_gram": 86.43,
+      "diesel_surcharge_threshold": 67
+    },
+    {
+      "start": "2017-01-01",
+      "end": "2017-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          76,
+          353,
+          2
+        ],
+        [
+          76,
+          102,
+          505,
+          66
+        ],
+        [
+          102,
+          150,
+          2221,
+          145
+        ],
+        [
+          150,
+          168,
+          9181,
+          238
+        ],
+        [
+          168,
+          null,
+          13465,
+          475
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          76,
+          353,
+          2
+        ],
+        [
+          76,
+          102,
+          505,
+          66
+        ],
+        [
+          102,
+          150,
+          2221,
+          145
+        ],
+        [
+          150,
+          168,
+          9181,
+          238
+        ],
+        [
+          168,
+          null,
+          13465,
+          475
+        ]
+      ],
+      "phev_bands": [
+        [
+          0,
+          30,
+          0,
+          20
+        ],
+        [
+          30,
+          50,
+          600,
+          90
+        ],
+        [
+          50,
+          null,
+          2400,
+          300
+        ]
+      ],
+      "diesel_surcharge_per_gram": 86.69,
+      "diesel_surcharge_threshold": 65
+    },
+    {
+      "start": "2018-01-01",
+      "end": "2018-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          73,
+          356,
+          2
+        ],
+        [
+          73,
+          98,
+          502,
+          63
+        ],
+        [
+          98,
+          144,
+          2077,
+          139
+        ],
+        [
+          144,
+          162,
+          8471,
+          229
+        ],
+        [
+          162,
+          null,
+          12593,
+          458
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          73,
+          356,
+          2
+        ],
+        [
+          73,
+          98,
+          502,
+          63
+        ],
+        [
+          98,
+          144,
+          2077,
+          139
+        ],
+        [
+          144,
+          162,
+          8471,
+          229
+        ],
+        [
+          162,
+          null,
+          12593,
+          458
+        ]
+      ],
+      "phev_bands": [
+        [
+          0,
+          30,
+          0,
+          19
+        ],
+        [
+          30,
+          50,
+          570,
+          87
+        ],
+        [
+          50,
+          null,
+          2310,
+          289
+        ]
+      ],
+      "diesel_surcharge_per_gram": 87.38,
+      "diesel_surcharge_threshold": 63
+    },
+    {
+      "start": "2019-01-01",
+      "end": "2019-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          71,
+          360,
+          2
+        ],
+        [
+          71,
+          95,
+          502,
+          60
+        ],
+        [
+          95,
+          139,
+          1942,
+          131
+        ],
+        [
+          139,
+          156,
+          7706,
+          215
+        ],
+        [
+          156,
+          null,
+          11361,
+          429
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          71,
+          360,
+          2
+        ],
+        [
+          71,
+          95,
+          502,
+          60
+        ],
+        [
+          95,
+          139,
+          1942,
+          131
+        ],
+        [
+          139,
+          156,
+          7706,
+          215
+        ],
+        [
+          156,
+          null,
+          11361,
+          429
+        ]
+      ],
+      "phev_bands": [
+        [
+          0,
+          30,
+          0,
+          27
+        ],
+        [
+          30,
+          50,
+          810,
+          113
+        ],
+        [
+          50,
+          null,
+          3070,
+          271
+        ]
+      ],
+      "diesel_surcharge_per_gram": 88.43,
+      "diesel_surcharge_threshold": 61
+    },
+    {
+      "start": "2020-01-01",
+      "end": "2020-06-30",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          68,
+          366,
+          2
+        ],
+        [
+          68,
+          91,
+          502,
+          59
+        ],
+        [
+          91,
+          133,
+          1859,
+          129
+        ],
+        [
+          133,
+          150,
+          7277,
+          212
+        ],
+        [
+          150,
+          null,
+          10881,
+          424
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          68,
+          366,
+          2
+        ],
+        [
+          68,
+          91,
+          502,
+          59
+        ],
+        [
+          91,
+          133,
+          1859,
+          129
+        ],
+        [
+          133,
+          150,
+          7277,
+          212
+        ],
+        [
+          150,
+          null,
+          10881,
+          424
+        ]
+      ],
+      "phev_bands": [
+        [
+          0,
+          30,
+          0,
+          27
+        ],
+        [
+          30,
+          50,
+          810,
+          111
+        ],
+        [
+          50,
+          null,
+          3030,
+          267
+        ]
+      ],
+      "diesel_surcharge_per_gram": 89.85,
+      "diesel_surcharge_threshold": 59
+    },
+    {
+      "start": "2020-07-01",
+      "end": "2020-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          90,
+          366,
+          1
+        ],
+        [
+          90,
+          116,
+          456,
+          57
+        ],
+        [
+          116,
+          162,
+          1938,
+          124
+        ],
+        [
+          162,
+          180,
+          7642,
+          204
+        ],
+        [
+          180,
+          null,
+          11314,
+          408
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          90,
+          366,
+          1
+        ],
+        [
+          90,
+          116,
+          456,
+          57
+        ],
+        [
+          116,
+          162,
+          1938,
+          124
+        ],
+        [
+          162,
+          180,
+          7642,
+          204
+        ],
+        [
+          180,
+          null,
+          11314,
+          408
+        ]
+      ],
+      "phev_bands": [
+        [
+          0,
+          34,
+          0,
+          24
+        ],
+        [
+          34,
+          60,
+          816,
+          83
+        ],
+        [
+          60,
+          null,
+          2974,
+          199
+        ]
+      ],
+      "diesel_surcharge_per_gram": 78.82,
+      "diesel_surcharge_threshold": 80
+    },
+    {
+      "start": "2021-01-01",
+      "end": "2021-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          86,
+          372,
+          1
+        ],
+        [
+          86,
+          111,
+          458,
+          60
+        ],
+        [
+          111,
+          155,
+          1958,
+          132
+        ],
+        [
+          155,
+          172,
+          7766,
+          216
+        ],
+        [
+          172,
+          null,
+          11438,
+          432
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          86,
+          372,
+          1
+        ],
+        [
+          86,
+          111,
+          458,
+          60
+        ],
+        [
+          111,
+          155,
+          1958,
+          132
+        ],
+        [
+          155,
+          172,
+          7766,
+          216
+        ],
+        [
+          172,
+          null,
+          11438,
+          432
+        ]
+      ],
+      "phev_bands": [
+        [
+          0,
+          34,
+          0,
+          24
+        ],
+        [
+          34,
+          60,
+          816,
+          84
+        ],
+        [
+          60,
+          null,
+          3000,
+          202
+        ]
+      ],
+      "diesel_surcharge_per_gram": 83.59,
+      "diesel_surcharge_threshold": 77
+    },
+    {
+      "start": "2022-01-01",
+      "end": "2022-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          84,
+          376,
+          1
+        ],
+        [
+          84,
+          109,
+          460,
+          62
+        ],
+        [
+          109,
+          152,
+          2010,
+          137
+        ],
+        [
+          152,
+          168,
+          7901,
+          224
+        ],
+        [
+          168,
+          null,
+          11485,
+          448
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          84,
+          376,
+          1
+        ],
+        [
+          84,
+          109,
+          460,
+          62
+        ],
+        [
+          109,
+          152,
+          2010,
+          137
+        ],
+        [
+          152,
+          168,
+          7901,
+          224
+        ],
+        [
+          168,
+          null,
+          11485,
+          448
+        ]
+      ],
+      "phev_bands": [
+        [
+          0,
+          34,
+          0,
+          24
+        ],
+        [
+          34,
+          60,
+          816,
+          85
+        ],
+        [
+          60,
+          null,
+          3026,
+          204
+        ]
+      ],
+      "diesel_surcharge_per_gram": 86.67,
+      "diesel_surcharge_threshold": 75
+    },
+    {
+      "start": "2023-01-01",
+      "end": "2023-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          82,
+          400,
+          2
+        ],
+        [
+          82,
+          106,
+          564,
+          68
+        ],
+        [
+          106,
+          148,
+          2196,
+          149
+        ],
+        [
+          148,
+          165,
+          8454,
+          244
+        ],
+        [
+          165,
+          null,
+          12602,
+          488
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          82,
+          400,
+          2
+        ],
+        [
+          82,
+          106,
+          564,
+          68
+        ],
+        [
+          106,
+          148,
+          2196,
+          149
+        ],
+        [
+          148,
+          165,
+          8454,
+          244
+        ],
+        [
+          165,
+          null,
+          12602,
+          488
+        ]
+      ],
+      "phev_bands": [
+        [
+          0,
+          34,
+          0,
+          26
+        ],
+        [
+          34,
+          60,
+          884,
+          91
+        ],
+        [
+          60,
+          null,
+          3250,
+          217
+        ]
+      ],
+      "diesel_surcharge_per_gram": 94.3,
+      "diesel_surcharge_threshold": 73
+    },
+    {
+      "start": "2024-01-01",
+      "end": "2024-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          80,
+          440,
+          2
+        ],
+        [
+          80,
+          104,
+          600,
+          76
+        ],
+        [
+          104,
+          145,
+          2424,
+          167
+        ],
+        [
+          145,
+          161,
+          9271,
+          274
+        ],
+        [
+          161,
+          null,
+          13655,
+          549
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          80,
+          440,
+          2
+        ],
+        [
+          80,
+          104,
+          600,
+          76
+        ],
+        [
+          104,
+          145,
+          2424,
+          167
+        ],
+        [
+          145,
+          161,
+          9271,
+          274
+        ],
+        [
+          161,
+          null,
+          13655,
+          549
+        ]
+      ],
+      "phev_bands": [
+        [
+          0,
+          34,
+          0,
+          28
+        ],
+        [
+          34,
+          60,
+          952,
+          100
+        ],
+        [
+          60,
+          null,
+          3552,
+          239
+        ]
+      ],
+      "diesel_surcharge_per_gram": 106.07,
+      "diesel_surcharge_threshold": 71
+    },
+    {
+      "start": "2025-01-01",
+      "end": "2025-12-31",
+      "status": "verified",
+      "method": "co2_bands",
+      "petrol_lpg_bands": [
+        [
+          0,
+          79,
+          667,
+          2
+        ],
+        [
+          79,
+          101,
+          825,
+          79
+        ],
+        [
+          101,
+          141,
+          2563,
+          173
+        ],
+        [
+          141,
+          157,
+          9483,
+          284
+        ],
+        [
+          157,
+          null,
+          14027,
+          568
+        ]
+      ],
+      "diesel_bands": [
+        [
+          0,
+          79,
+          667,
+          2
+        ],
+        [
+          79,
+          101,
+          825,
+          79
+        ],
+        [
+          101,
+          141,
+          2563,
+          173
+        ],
+        [
+          141,
+          157,
+          9483,
+          284
+        ],
+        [
+          157,
+          null,
+          14027,
+          568
+        ]
+      ],
+      "phev_bands": null,
+      "diesel_surcharge_per_gram": 109.87,
+      "diesel_surcharge_threshold": 70,
+      "notes": "No separate PHEV tariff from 1 January 2025; PHEV uses regular passenger-car CO2 tariff."
+    }
+  ],
+  "notes": "2021-2025 added from official Belastingdienst tariff tables. 2025 has no separate PHEV tariff."
+}

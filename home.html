@@ -1,0 +1,49 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#070b12">
+<meta name="description" content="Krijg eenvoudig een indicatie van de BPM voor een importauto met BPM Wijzer.">
+<title>BPM Wijzer — inzicht in BPM voor importauto's</title>
+<style>
+*{box-sizing:border-box}
+:root{color-scheme:dark;--bg:#070b12;--panel:#101720;--line:#273340;--text:#f7f9fc;--muted:#aeb8c5;--blue:#1677ff;--blue2:#43a2ff}
+body{margin:0;background:radial-gradient(ellipse at 72% 5%,rgba(22,119,255,.16),transparent 38%),var(--bg);color:var(--text);font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif}
+a{color:inherit}.wrap{max-width:1000px;margin:auto;padding:0 24px}
+header{height:76px;border-bottom:1px solid rgba(255,255,255,.08)}header .wrap{height:100%;display:flex;align-items:center;justify-content:space-between}
+.brand{font-size:21px;font-weight:800;letter-spacing:-.5px;text-decoration:none}.brand span{color:var(--blue2)}
+.nav{font-size:14px;color:var(--muted);text-decoration:none}.hero{padding:90px 0 76px;max-width:730px}
+.eyebrow{font-size:12px;color:var(--blue2);font-weight:800;letter-spacing:2px;text-transform:uppercase}
+h1{font-size:clamp(42px,7vw,68px);letter-spacing:-2.8px;line-height:1.02;margin:17px 0 19px}
+.lead{font-size:19px;line-height:1.6;color:var(--muted);max-width:620px;margin:0}
+.actions{display:flex;align-items:center;gap:20px;margin-top:30px;flex-wrap:wrap}
+.button{display:inline-flex;align-items:center;justify-content:center;min-height:52px;padding:0 22px;border-radius:12px;background:linear-gradient(90deg,#146fff,#2c8cff);font-weight:800;text-decoration:none;box-shadow:0 8px 24px rgba(22,119,255,.23)}
+.text-link{font-size:14px;color:#c6d0dc;text-decoration:none}.text-link:hover,.nav:hover{text-decoration:underline}
+.steps{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;padding-bottom:58px}
+.step{padding:21px;border:1px solid var(--line);border-radius:16px;background:linear-gradient(180deg,#111923,#0e151e)}
+.num{font-size:12px;font-weight:800;color:var(--blue2);letter-spacing:1.5px}.step h2{font-size:16px;margin:11px 0 8px}.step p{font-size:13px;line-height:1.55;color:var(--muted);margin:0}
+.note{padding:17px 19px;border-radius:14px;border:1px solid #26313d;background:#0d151e;color:#9daaba;font-size:12px;line-height:1.6;margin-bottom:46px}
+footer{padding:22px 0 32px;border-top:1px solid rgba(255,255,255,.08);color:#788594;font-size:12px}
+@media(max-width:650px){.hero{padding:66px 0 56px}.steps{grid-template-columns:1fr}.nav{font-size:12px}}
+</style>
+</head>
+<body>
+<header><div class="wrap"><a class="brand" href="/">BPM <span>WIJZER</span></a><a class="nav" href="/calculator">Open de calculator&nbsp; →</a></div></header>
+<main class="wrap">
+  <section class="hero">
+    <div class="eyebrow">BPM voor importauto's</div>
+    <h1>Weet waar je aan toe bent.</h1>
+    <p class="lead">Krijg snel een indicatie van de BPM op basis van de gegevens van een auto. Vul vijf gegevens in en bekijk de berekening en de gebruikte tariefopties.</p>
+    <div class="actions"><a class="button" href="/calculator">Bereken de BPM&nbsp; →</a><a class="text-link" href="#zo-werkt-het">Hoe werkt het?</a></div>
+  </section>
+  <section id="zo-werkt-het" class="steps" aria-label="Zo werkt het">
+    <article class="step"><div class="num">01</div><h2>Vul voertuiggegevens in</h2><p>Gebruik de eerste toelating, kilometerstand, brandstof en CO₂-uitstoot.</p></article>
+    <article class="step"><div class="num">02</div><h2>Bereken de indicatie</h2><p>De calculator vergelijkt beschikbare historische tarieven en past forfaitaire afschrijving toe.</p></article>
+    <article class="step"><div class="num">03</div><h2>Bekijk de uitleg</h2><p>Je ziet de indicatie, afschrijving en de vergeleken tariefopties.</p></article>
+  </section>
+  <aside class="note">De uitkomst is een indicatie, geen definitieve vaststelling van de Belastingdienst. De RDW-goedkeurdatum en de juiste CO₂-waarde en -methode kunnen het uiteindelijke bedrag beïnvloeden.</aside>
+</main>
+<footer><div class="wrap">BPM Wijzer · Release 1 · <a href="/privacy">Privacy</a></div></footer>
+</body>
+</html>

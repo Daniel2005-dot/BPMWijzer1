@@ -1,0 +1,259 @@
+<!doctype html>
+<html lang="nl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1,viewport-fit=cover">
+<meta name="theme-color" content="#070b12">
+<title>BPM Calculator</title>
+<style>
+*{box-sizing:border-box}
+:root{
+ --bg:#070b12;--panel:#101720;--panel2:#151e29;--line:#344252;
+ --text:#f7f9fc;--muted:#aeb8c5;--blue:#1677ff;--blue2:#43a2ff;
+ --green:#35d56f;
+}
+body{
+ margin:0;background:#05080d;color:var(--text);
+ font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Arial,sans-serif;
+}
+.app{min-height:100vh;max-width:520px;margin:auto;background:var(--bg)}
+.top{
+ height:66px;padding:0 22px;display:flex;align-items:center;
+ justify-content:space-between;border-bottom:1px solid #202a35;
+ position:sticky;top:0;background:rgba(7,11,18,.96);z-index:5
+}
+.logo{font-size:21px;font-weight:800;letter-spacing:-.5px}
+.logo span{font-weight:400;color:#93a0b0}
+.menu{font-size:27px;line-height:1;color:#fff}
+.hero{
+ padding:38px 24px 24px;min-height:175px;
+ background:
+ radial-gradient(circle at 85% 35%,rgba(22,119,255,.20),transparent 34%),
+ linear-gradient(180deg,#0b121c 0%,#070b12 100%);
+}
+.hero h1{margin:0 0 8px;font-size:37px;line-height:1;letter-spacing:-1.5px}
+.hero p{margin:0;color:var(--muted);font-size:16px;line-height:1.45}
+.content{padding:0 18px 34px}
+.card{
+ background:linear-gradient(180deg,#111923,#0e151e);
+ border:1px solid #273340;border-radius:20px;padding:20px;
+ box-shadow:0 12px 35px rgba(0,0,0,.22);
+}
+.field{margin-bottom:17px}
+label{display:block;font-size:14px;font-weight:700;margin:0 0 7px}
+.control{position:relative}
+input,select{
+ width:100%;height:52px;border-radius:12px;border:1px solid var(--line);
+ background:#141d27;color:#fff;font-size:16px;padding:0 14px;
+ outline:none;appearance:none;
+}
+input::placeholder{color:#8491a0}
+input:focus,select:focus{border-color:var(--blue);box-shadow:0 0 0 3px rgba(22,119,255,.14)}
+.select-arrow{position:absolute;right:16px;top:16px;color:#aeb8c5;pointer-events:none}
+.suffix{position:absolute;right:15px;top:16px;color:#aeb8c5;font-size:14px}
+.has-suffix{padding-right:72px}
+.help{font-size:11px;color:#7f8c9b;margin:6px 2px 0;line-height:1.4}
+button{
+ width:100%;height:54px;border:0;border-radius:13px;background:linear-gradient(90deg,#146fff,#2c8cff);
+ color:white;font-size:15px;font-weight:800;letter-spacing:.3px;cursor:pointer;
+ box-shadow:0 8px 20px rgba(22,119,255,.23);margin-top:2px
+}
+button:active{transform:translateY(1px)}
+.result{display:none}
+.result .hero{padding-bottom:25px}
+.result-card{text-align:center}
+.result-label{font-size:12px;letter-spacing:2px;color:var(--blue2);font-weight:800}
+.amount{font-size:52px;line-height:1.05;font-weight:850;letter-spacing:-2px;margin:8px 0 13px}
+.badge{
+ display:inline-flex;align-items:center;gap:7px;padding:8px 14px;border-radius:999px;
+ color:var(--green);background:rgba(53,213,111,.08);border:1px solid rgba(53,213,111,.35);
+ font-size:12px;font-weight:700
+}
+.detail-card{margin-top:15px;text-align:left}
+.detail-card h2{font-size:16px;margin:0 0 5px}
+.detail-row{display:flex;justify-content:space-between;gap:15px;padding:13px 0;border-bottom:1px solid #26313d;font-size:13px}
+.detail-row:last-child{border-bottom:0}
+.detail-row span:first-child{color:#aeb8c5}
+.detail-row span:last-child{font-weight:700;text-align:right}
+.secondary{
+ background:#111923;border:1px solid #344252;box-shadow:none;color:#fff;margin-top:10px
+}
+.disclaimer{margin-top:15px;padding:14px;border-radius:14px;background:#0d151e;border:1px solid #202c38;color:#8e9baa;font-size:11px;line-height:1.5}
+.tariff-comparison{margin-top:10px;padding:12px 14px;border-radius:14px;background:#0d151e;border:1px solid #202c38;color:#aeb8c5;font-size:11px;line-height:1.5}
+.tariff-comparison strong{color:#f7f9fc}
+.back{background:transparent;color:#b9c3ce;box-shadow:none;margin-top:7px}
+footer{padding:0 24px 30px;color:#667281;font-size:10px;line-height:1.5}
+@media(min-width:760px){
+ body{padding:32px 24px}
+ .app{max-width:1080px;min-height:calc(100vh - 64px);border:1px solid #202a35;border-radius:26px;overflow:hidden;box-shadow:0 20px 60px rgba(0,0,0,.35)}
+ .top{height:72px;padding:0 36px}
+ .hero{padding:48px 48px 34px;min-height:0}
+ .hero h1{font-size:42px}
+ .content{max-width:940px;margin:0 auto;padding:0 48px 42px}
+ #form{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));column-gap:18px}
+ #form .field{min-width:0}
+ #form>button,#form>#error{grid-column:1/-1}
+ footer{padding:0 48px 32px}
+}
+
+.field[hidden]{display:none !important;}
+</style>
+</head>
+<body>
+<div class="app">
+
+  <div id="inputView">
+    <header class="top">
+      <div class="logo">BPM <span>CALCULATOR</span></div>
+      <div class="menu">☰</div>
+    </header>
+
+    <section class="hero">
+      <h1>BPM Calculator</h1>
+      <p>Bereken eenvoudig de BPM<br>van je auto.</p>
+    </section>
+
+    <main class="content">
+      <form class="card" id="form">
+        <div class="field">
+          <label for="date">Eerste toelating</label>
+          <input id="date" placeholder="MM / JJJJ" inputmode="numeric" maxlength="7">
+        </div>
+
+        <div class="field">
+          <label for="mileage">Kilometerstand</label>
+          <div class="control">
+            <input id="mileage" class="has-suffix" placeholder="Bijv. 45.000" inputmode="numeric">
+            <span class="suffix">km</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="fuel">Brandstof</label>
+          <div class="control">
+            <select id="fuel">
+              <option value="">Kies brandstof</option>
+              <option>Benzine</option>
+              <option>Diesel</option>
+              <option>Benzine-hybride</option>
+              <option>Diesel-hybride</option>
+              <option>Benzine plug-in hybride</option>
+              <option>Diesel plug-in hybride</option>
+              <option>Elektrisch</option>
+              <option>LPG</option>
+            </select>
+            <span class="select-arrow">⌄</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="co2">CO₂-uitstoot</label>
+          <div class="control">
+            <input id="co2" class="has-suffix" placeholder="Bijv. 120" inputmode="decimal">
+            <span class="suffix">g/km</span>
+          </div>
+        </div>
+
+        <div class="field">
+          <label for="method">CO₂-methode</label>
+          <div class="control">
+            <select id="method">
+              <option>Automatisch bepalen</option>
+              <option>WLTP</option>
+              <option>NEDC</option>
+            </select>
+            <span class="select-arrow">⌄</span>
+          </div>
+        </div>
+
+        <button type="submit">BPM BEREKENEN&nbsp;&nbsp;→</button>
+        <div id="error" style="display:none;margin-top:12px;padding:12px 14px;border-radius:12px;background:#26171a;border:1px solid #6a2b32;color:#ffb5bc;font-size:12px;line-height:1.45"></div>
+      </form>
+    </main>
+    <footer>Release 1 · Alleen voor het berekenen van BPM.</footer>
+  </div>
+
+  <div id="resultView" class="result">
+    <header class="top">
+      <div class="logo">BPM <span>CALCULATOR</span></div>
+      <div class="menu">☰</div>
+    </header>
+
+    <section class="hero">
+      <h1>Jouw BPM</h1>
+      <p>Geschatte BPM op basis van de<br>ingevulde gegevens.</p>
+    </section>
+
+    <main class="content">
+      <section class="card result-card">
+        <div class="result-label">GESCHATTE BPM</div>
+        <div class="amount">—</div>
+        <div class="badge">✓ Berekening voltooid</div>
+      </section>
+
+      <div class="disclaimer">Geschatte BPM op basis van de ingevulde gegevens.</div>
+      <div class="tariff-comparison" hidden></div>
+      <button class="back" id="edit">← Nieuwe berekening</button>
+    </main>
+  </div>
+</div>
+
+<script>
+const form=document.getElementById('form');
+const fuel=document.getElementById('fuel');
+function normalizeFuel(value){
+  const map={
+    'Benzine-hybride': {fuel:'hybrid', combustion_fuel:'petrol', hybrid:true, phev:false},
+    'Diesel-hybride': {fuel:'hybrid', combustion_fuel:'diesel', hybrid:true, phev:false},
+    'Benzine plug-in hybride': {fuel:'phev', combustion_fuel:'petrol', hybrid:true, phev:true},
+    'Diesel plug-in hybride': {fuel:'phev', combustion_fuel:'diesel', hybrid:true, phev:true}
+  };
+  return map[value] || {fuel:value.toLowerCase(), combustion_fuel:null, hybrid:false, phev:false};
+}
+
+form.addEventListener('submit', async e=>{
+ e.preventDefault();
+ const fuelMap={'Benzine':'petrol','Diesel':'diesel','Benzine-hybride':'hybrid_petrol','Diesel-hybride':'hybrid_diesel','Benzine plug-in hybride':'phev_petrol','Diesel plug-in hybride':'phev_diesel','Elektrisch':'electric','LPG':'lpg'};
+ const payload={first_admission:document.getElementById('date').value,mileage_km:document.getElementById('mileage').value,fuel:fuelMap[fuel.value],co2_gkm:document.getElementById('co2').value,co2_method:({'Automatisch bepalen':'auto','WLTP':'wltp','NEDC':'nedc'})[document.getElementById('method').value]};
+ try{
+  const r=await fetch('/api/release1-calculate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify(payload)}); const data=await r.json(); if(!r.ok) throw new Error(data.error||'Berekening mislukt');
+  document.getElementById('inputView').style.display='none'; document.getElementById('resultView').style.display='block';
+  const amount=document.querySelector('.amount'), badge=document.querySelector('.badge');
+  if(data.status==='ok'){
+    const low=Number(data.display_bpm_min ?? data.display_bpm), high=Number(data.display_bpm_max ?? data.display_bpm);
+    const money=n=>'€ '+n.toLocaleString('nl-NL');
+    amount.textContent=low===high?money(low):money(low)+'–'+money(high);
+    badge.textContent='✓ Afschrijving inbegrepen';
+    const pct=Number(data.depreciation_pct_min).toLocaleString('nl-NL',{maximumFractionDigits:2})+'–'+Number(data.depreciation_pct_max).toLocaleString('nl-NL',{maximumFractionDigits:2})+'%';
+    const tariffYear=data.selected_tariff_start?data.selected_tariff_start.slice(0,4):'huidig';
+    document.querySelector('.disclaimer').textContent='Bruto BPM '+money(Number(data.gross_bpm))+' (laagste vergeleken tarief: '+tariffYear+'). Forfaitaire afschrijving: '+pct+'. Indicatie per '+new Date(data.as_of_date+'T12:00:00').toLocaleDateString('nl-NL')+'. Bandbreedte houdt rekening met de onbekende dag binnen de opgegeven maand. De RDW-goedkeurdatum kan het bedrag wijzigen; de kilometerstand telt niet mee in de forfaitaire tabel.'+(data.method_assumption?' '+data.method_assumption:'');
+    const comparison=document.querySelector('.tariff-comparison');
+    const options=Array.isArray(data.tariff_candidates)?data.tariff_candidates:[];
+    if(options.length>1){
+      const formatRange=(candidate)=>{
+        const a=Number(candidate.estimated_bpm_min ?? Math.floor(Number(candidate.gross_bpm)*(100-Number(data.depreciation_pct_max))/100));
+        const b=Number(candidate.estimated_bpm_max ?? Math.floor(Number(candidate.gross_bpm)*(100-Number(data.depreciation_pct_min))/100));
+        return a===b?money(a):money(a)+'–'+money(b);
+      };
+      comparison.innerHTML='<strong>Tariefvergelijking</strong><br>'+options.map(option=>{
+        const label=option.start==='2026-current'?'Huidig tarief (2026)':option.start.slice(0,4);
+        const selected=Number(option.gross_bpm)===Number(data.gross_bpm)&&option.start===data.selected_tariff_start;
+        return (selected?'✓ ':'')+label+': bruto '+money(Number(option.gross_bpm))+' → indicatie '+formatRange(option)+(selected?' (gekozen)':'');
+      }).join('<br>')+'<br>Vergelijking van bruto tarieven; de forfaitaire afschrijving is voor alle opties gelijk.';
+      comparison.hidden=false;
+    }else{comparison.hidden=true;comparison.textContent='';}
+  }
+  else {amount.textContent='Controle vereist'; badge.textContent='⚠ Gegevens controleren'; document.querySelector('.disclaimer').textContent=data.reason||'Controle van de gegevens is nodig.';}
+ }catch(err){
+  const box=document.getElementById('error');
+  box.textContent='De berekening kon niet worden uitgevoerd. Start eerst de server met start_windows.bat en open de calculator via het browservenster dat verschijnt. Je ingevulde gegevens zijn behouden.';
+  box.style.display='block';
+}
+});
+document.getElementById('edit').onclick=()=>{
+ document.getElementById('resultView').style.display='none';
+ document.getElementById('inputView').style.display='block';
+};
+</script>
+</body>
+</html>
